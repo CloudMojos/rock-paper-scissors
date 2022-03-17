@@ -9,25 +9,34 @@ function computerPlay() {
         return "scissors";
 }
 
-function playRound(playerSelection, ComputerSelection) {
+function playRound(playerSelection, computerSelection) {
     // refactor your code with: winning conditions, losing conditions and tie conditions.
-    playerSelection.toLowerCase();
-    if (playerSelection == "rock" && ComputerSelection == "scissors"
-        || playerSelection == "paper" && ComputerSelection == "rock"
-        || playerSelection == "scissors" && ComputerSelection == "paper") {
+    playerSelection = playerSelection.toLowerCase();
+    if (playerSelection == "rock" && computerSelection == "scissors"
+        || playerSelection == "paper" && computerSelection == "rock"
+        || playerSelection == "scissors" && computerSelection == "paper") {
         return "You win!";
     }
-    else if (playerSelection == "rock" && ComputerSelection == "paper"
-        || playerSelection == "paper" && ComputerSelection == "scissors"
-        || playerSelection == "scissors" && ComputerSelection == "rock") {
+    else if (playerSelection == "rock" && computerSelection == "paper"
+        || playerSelection == "paper" && computerSelection == "scissors"
+        || playerSelection == "scissors" && computerSelection == "rock") {
         return "You lose.";
     }
     else return "Draw";
 }
 
 //for (let i = 0; i < 5; i++) {
-    let playerSelection = prompt("rock, paper, or scissors?");
-    console.log(playRound(playerSelection, computerPlay()));
+    //let playerSelection;
+    //console.log(playRound(playerSelection, computerPlay()));
 //}
 
 // UI
+const btn = document.querySelectorAll('button');
+btn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        let computerSelection = computerPlay();
+        alert("You picked " + btn.id);
+        alert("Computer picked " + computerSelection);
+        alert(playRound(btn.id, computerSelection));
+    })
+})
