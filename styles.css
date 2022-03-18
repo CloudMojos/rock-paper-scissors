@@ -5,9 +5,25 @@
 }
 
 body {
+    height: 100vh;
     display: flex;
+    justify-content: center;
+    
+    background-image: url(images/2381080.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.content {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.781);
+    color: whitesmoke;
 }
 
 .page-title {
@@ -19,16 +35,28 @@ body {
     display: flex;
     justify-content: space-evenly;
 
-    margin: 30vh 0;
+    margin: 20vh 0;
 }
 
 button {
     width: 15em;
     height: 14em;
-    border-radius: 25px;
+    border-radius: 25px;  
+}
+
+button img {
+    width: inherit;
+    height: inherit;
+
+    border-radius: inherit;
+    border: 0.7em solid white;  
 }
 
 button:hover {
     background-color: black;
+}
+
+.verdict {
+    margin-bottom: 4vh;
 }
 
