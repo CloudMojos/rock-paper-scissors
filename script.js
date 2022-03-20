@@ -25,6 +25,8 @@ function playRound(playerSelection, computerSelection) {
     else return "Draw";
 }
 
+
+
 //for (let i = 0; i < 5; i++) {
     //let playerSelection;
     //console.log(playRound(playerSelection, computerPlay()));
@@ -35,8 +37,8 @@ const btn = document.querySelectorAll('button');
 btn.forEach((btn) => {
     btn.addEventListener('click', () => {
         let computerSelection = computerPlay();
-        alert("You picked " + btn.id);
+        /*alert("You picked " + btn.id);
         alert("Computer picked " + computerSelection);
-        alert(playRound(btn.id, computerSelection));
+        alert(playRound(btn.id, computerSelection));*/
     })
 })
