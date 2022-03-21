@@ -51,4 +51,7 @@ btn.forEach((btn) => {
         alert("Computer picked " + computerSelection);
         alert(playRound(btn.id, computerSelection));*/
     })
+    btn.addEventListener('mouseup', () => {
+        btn.classList.remove('clicked');
+    })
 })
