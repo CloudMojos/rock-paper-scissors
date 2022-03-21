@@ -8,17 +8,31 @@
     <body>
         <div class="content">
             <div class="screen">
-                <p class="player-health">HEALTH</p>
-                <div class="game-objects">
-                    <div class="enemy">ENEMY</div>
-                    <div class="player">PLAYER</div>
+                <div class="health-bar">
+                    <p class="player-health">HEALTH</p>
+                    <div>|</div>
+                    <div>|</div>
+                    <div>|</div>
+                    <div>|</div>
+                    <div>|</div>
                 </div>
-                <p class="enemy-health">HEALTH</p>
+                <div class="game-objects">
+                    <div class="enemy"><img class="enemy-image" src="images/rock.png"></div>
+                    <div class="player"><img class="player-image" src="images/rock.png"></div>
+                </div>
+                <div class="health-bar">
+                    <p class="enemy-health">HEALTH</p>
+                    <div>|</div>
+                    <div>|</div>
+                    <div>|</div>
+                    <div>|</div>
+                    <div>|</div>
+                </div>
             </div>
             <div class="buttons">
-                <button id="rock">Rock</button>
-                <button id="paper">Paper</button>
-                <button id="scissors">Scissors</button>
+                <button id="rock"><img class="image-rock" src="images/rock.png"></button>
+                <button id="paper"><img class="image-paper" src="images/paper.png"></button>
+                <button id="scissors"><img class="image-scissors" src="images/scissors.png"></button>
             </div>
         </div>
     </body>

@@ -26,7 +26,7 @@ body {
     margin-top: 5vh;
     width: 90%;
     height: 75%;
-    background-color: aliceblue;
+    background-color: rgb(145, 175, 201);
 
     display: flex;
     justify-content: space-around;
@@ -43,18 +43,32 @@ body {
 .player, .enemy {
     width: 5em;
     height: 5em;
-    border-radius: 100%;
-
-    margin: 2em;
+    border-radius: 100%;    
 }
 
 .player {
-    background-color: green;
+    padding: 0;
+}
+
+.player-image {
+    width: 7em;
+    height: 7em;
 }
 
 .enemy {
-    background-color: red;
     align-self: flex-end;
+}
+
+.enemy-image {
+    width: 7em;
+    height: 7em;
+}
+
+button .image-rock,button .image-paper,button .image-scissors {
+    width: 35px;
+    height: 35px;
+
+    border: 0;
 }
 
 .player-health {
@@ -62,11 +76,11 @@ body {
 }
 
 .buttons {
-    width: 100%;
+    width: 90%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
-    margin-bottom: 5vh;
+    margin: 1vh 0 5vh 0;
 }
 
 button {
@@ -83,8 +97,20 @@ button img {
     border: 0.7em solid white;  
 }
 
-button:hover {
-    background-color: black;
+button#rock {
+    background-color: green;
+}
+
+#rock.clicked{
+    box-shadow: 5px 5px 2.5px rgb(0, 58, 0) inset;
+}
+
+button#paper {
+    background-color: blue;
+}
+
+button#scissors {
+    background-color: red;
 }
 
 .verdict {

@@ -33,10 +33,20 @@ function playRound(playerSelection, computerSelection) {
 //}
 
 // UI
+const playerImage = document.querySelector('.player-image');
+const computerImage = document.querySelector('.enemy-image');
 const btn = document.querySelectorAll('button');
 btn.forEach((btn) => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('mousedown', () => {
+        // Determine which button player picked
+
+        // Change player's hand image
+        playerImage.setAttribute('src', `images/${btn.id}.png`);
+        btn.classList.add('clicked');
+        // Determine which button computer picked
         let computerSelection = computerPlay();
+        computerImage.setAttribute('src', `images/${computerSelection}.png`);
+        // Change enemy's hand image
         /*alert("You picked " + btn.id);
         alert("Computer picked " + computerSelection);
         alert(playRound(btn.id, computerSelection));*/
