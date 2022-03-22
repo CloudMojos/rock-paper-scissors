@@ -9,33 +9,29 @@ function computerPlay() {
         return "scissors";
 }
 
+
+let playerScore = 0, computerScore = 0;
+
 function playRound(playerSelection, computerSelection) {
-    // refactor your code with: winning conditions, losing conditions and tie conditions.
     playerSelection = playerSelection.toLowerCase();
     if (playerSelection == "rock" && computerSelection == "scissors"
         || playerSelection == "paper" && computerSelection == "rock"
         || playerSelection == "scissors" && computerSelection == "paper") {
-        return "You win!";
+        return playerScore++;
     }
     else if (playerSelection == "rock" && computerSelection == "paper"
         || playerSelection == "paper" && computerSelection == "scissors"
         || playerSelection == "scissors" && computerSelection == "rock") {
-        return "You lose.";
+        return computerScore++;
     }
-    else return "Draw";
+    else return;
 }
 
-
-
-//for (let i = 0; i < 5; i++) {
-    //let playerSelection;
-    //console.log(playRound(playerSelection, computerPlay()));
-//}
-
-// UI
 const playerImage = document.querySelector('.player-image');
 const computerImage = document.querySelector('.enemy-image');
 const btn = document.querySelectorAll('button');
+
+
 btn.forEach((btn) => {
     btn.addEventListener('mousedown', () => {
         // Determine which button player picked
@@ -55,3 +51,8 @@ btn.forEach((btn) => {
         btn.classList.remove('clicked');
     })
 })
+
+function scoreCounter() {
+    
+}
+
